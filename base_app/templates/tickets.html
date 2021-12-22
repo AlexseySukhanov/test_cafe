@@ -1,0 +1,37 @@
+    <!-- ======= Whu Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Why choose <span>Our Restaurant</span></h2>
+          <p>We source all our meat from the UK, free range, freedom foods and red tractor accredited, choosing organic where possible.</p>
+        </div>
+
+        <div class="row">
+            {% for item in tickets %}
+                {% if forloop.first %}
+                  <div class="col-lg-4">
+                    <div class="box">
+                      <span>{{ item.position }}</span>
+                      <h4>{{ item.name }}</h4>
+                      <p>{{ item.ticket }}</p>
+                    </div>
+                  </div>
+
+                {% else %}
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="box">
+                          <span>{{ item.position }}</span>
+                          <h4>{{ item.name }}</h4>
+                          <p>{{ item.ticket }}</p>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Whu Us Section -->
